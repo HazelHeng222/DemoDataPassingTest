@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent iChar = new Intent(MainActivity.this, SecondActivity.class);
-                iChar.putExtra("cVal", 'a');
+                iChar.putExtra("value", 'a');
                 startActivity(iChar);
             }
         });
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtra("dVal", 99.9);
+                intent.putExtra("value", 99.9);
                 startActivity(intent);
             }
         });

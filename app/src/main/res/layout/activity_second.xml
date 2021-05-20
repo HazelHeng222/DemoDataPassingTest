@@ -8,21 +8,11 @@
     android:orientation="vertical"
     android:padding="10dp">
 
-    <TextView
-        android:id="@+id/txtPassDub"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtFloat" />
 
     <TextView
-        android:id="@+id/txtPassChar"
+        android:id="@+id/txtPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
 
-    <TextView
-        android:id="@+id/txtPassInt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
 </LinearLayout>

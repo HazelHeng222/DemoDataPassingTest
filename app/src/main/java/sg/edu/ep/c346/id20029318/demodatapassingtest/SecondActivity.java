@@ -10,9 +10,9 @@ import android.widget.TextView;
 public class SecondActivity extends AppCompatActivity {
 
     //Step 1 initialise
-    TextView txtChar;
-    TextView txtInt;
-    TextView txtDub;
+    TextView tvAnswer;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,29 +20,23 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         //Step 2 declare
-        txtChar = findViewById(R.id.txtPassDub);
-        txtInt = findViewById(R.id.txtPassInt);
-        txtDub = findViewById(R.id.txtPassDub);
+        tvAnswer = findViewById(R.id.txtPass);
 
         //Step 3 logic
         Intent intentReceived = getIntent();
-        int value = intentReceived.getIntExtra("value", 0);
-        txtInt.setText("Integer value received is: " + value);
+        int iVal = intentReceived.getIntExtra("value", 0);
+        char cVal = intentReceived.getCharExtra("value", '0');
+        double dVal = intentReceived.getDoubleExtra("value", 0.0);
+        if (iVal == 1) {
+            tvAnswer.setText("Integer value received is: " + iVal);
+        }
 
-        char cVal = intentReceived.getCharExtra("cVal", '0');
-        txtChar.setText("Character value received is: " + cVal);
+        if (cVal == 'a'){
+            tvAnswer.setText("Character value received is: " + cVal);
+        }
 
-        double dVal = intentReceived.getIntExtra("dVal", 0);
-        txtDub.setText("Double value received is: " + dVal);
-
-
-
-
-
-
-
-
-
-
+        if (dVal == 99.9) {
+            tvAnswer.setText("Double value received is: " + dVal);
+        }
     }
 }
